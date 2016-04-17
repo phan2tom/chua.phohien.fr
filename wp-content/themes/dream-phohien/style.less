@@ -1,0 +1,98 @@
+/*
+Theme Name: Dream Pho Hien
+Author: phohien
+Author URI: http://chua.phohien.fr/
+Description: Pho Hien Theme
+Version: 1.0
+Template: dream
+Text Domain: dream-phohien
+*/
+
+body.custom-background {
+	background-position: center 90px !important;
+}
+.site-wrapper {
+	background: transparent url('/wp-content/themes/dream-child/top.jpg') no-repeat center top;
+}
+
+.site-branding {
+	min-height: 250px;
+    line-height: normal;
+}
+
+.header-text {
+    position: relative;
+}
+
+.site-title, .site-description {
+   font-size: 1.5em;
+   position: absolute;
+ }
+.site-title a, .site-description {
+    font-weight: bold;
+    color: #ffd800;
+    text-shadow: 2px 2px 2px #d60112;
+}
+.site-title {
+    left: 0px;
+}
+.site-description {
+    right: 0px;
+}
+
+.address {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight:bold;
+}
+.address p {
+    margin: 10px;
+}
+.address img {
+    width: 20px;
+    vertical-align: bottom;
+}
+.address p:first-child span:last-child {
+    padding-left: 25px;
+}
+
+.breadcrumbs {
+    padding: 5px 15px;
+}
+
+.main-navigation .arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	
+	border-left: 5px solid #fff;
+	
+	position:absolute;top:10px;right:10px;
+}
+
+.entry-content input[type="submit"] {
+	line-height: inherit;
+	padding: 5px 15px;
+}
+
+.widget_polylang {
+	ul {
+		border-bottom: 1px solid #f2f2f2;
+		padding: 6px 0px;
+
+		li.lang-item {
+			display: inline-block;
+			padding: 6px;
+			border: 0;
+
+			&.current-lang {
+				background-color: #f80;
+				a {color: #fff;}
+			}
+		}
+	}
+}
