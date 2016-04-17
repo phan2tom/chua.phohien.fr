@@ -50,6 +50,8 @@ _UpgradeReport_Files
 [Tt]humbs.db
 kcfinder/upload
 
+node_modules/
+
 wp-admin/
 wp-includes/
 wp-content/
