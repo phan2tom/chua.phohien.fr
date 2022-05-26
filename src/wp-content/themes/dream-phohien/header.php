@@ -42,12 +42,12 @@
 				<div class="address">
 					<p>
 						<img src="<?php echo esc_url(get_stylesheet_directory_uri());?>/address.png"/>
-						<span>7 rue de Guebwiller</span><br />
-						<span>67100 Strasbourg</span>
+						<span>311 route de la Wantzenau</span><br />
+						<span>67000 Strasbourg</span>
 					</p>
 					<p>
 						<img src="<?php echo esc_url(get_stylesheet_directory_uri());?>/phone.png"/>
-						<span>03 88 84 58 31</span>
+						<span>03 88 61 99 34</span>
 					</p>
 				</div>
         	</div>
