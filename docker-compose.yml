@@ -1,0 +1,44 @@
+version: "3"
+    
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql/chuaphohien:/var/lib/mysql/chuaphohien
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: chuaphohien
+      MYSQL_USER: root
+      MYSQL_PASSWORD: somewordpress
+    
+  pma:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin:5
+    ports:
+      - "81:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: somewordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:6.0-php7.4-apache
+    volumes:
+      - ./src/wp-content/plugins:/var/www/html/wp-content/plugins
+      - ./src/wp-content/themes/dream:/var/www/html/wp-content/themes/dream
+      - ./src/wp-content/themes/dream-phohien:/var/www/html/wp-content/themes/dream-phohien
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: somewordpress
+      WORDPRESS_DB_NAME: chuaphohien
+      WORDPRESS_TABLE_PREFIX: ph_
+
+volumes:
+  db_data:
